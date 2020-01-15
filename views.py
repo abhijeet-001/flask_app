@@ -54,7 +54,8 @@ def admin_dashboard():
     if requests is not None:
         for req in requests:
             location = get_loc_by_ip(req.ip_address)
-            ip_markers.append(location)
+            if location is not None:
+                ip_markers.append(location)
 
         map = Map("admin-google-map",lat=17.685895,lng=77.158687, zoom=3,markers=ip_markers)
     else:
@@ -89,3 +90,5 @@ def get_loc_by_ip(ip):
         location = data.loc.split(",")
         marker = { "lat": float(location[0]), "lng": float(location[1]), "infobox": ip }
         return marker
+    else:
+        return None
