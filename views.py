@@ -10,7 +10,11 @@ from flask_googlemaps import Map
 # Defines Home Page
 @app.route("/")
 def index():
-    user_ip = request.remote_addr
+    if request.headers.getlist("X-Forwarded-For"):
+        user_ip = request.headers.getlist("X-Forwarded-For")[0]
+    else:
+        user_ip = request.remote_addr
+    # user_ip = getrequest.remote_addr
     req = Request(ip_address=user_ip)
     db.session.add(req)
     db.session.commit()
