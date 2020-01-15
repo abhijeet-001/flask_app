@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Flask Demo App{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="mt-5">
+            <h1>Welcome to Flask demo app</h1>
+            <div class="mt-5">
+                <h5><strong>Custom Commands</strong></h5>
+                <dl>
+                    <dt>Migrate Tables</dt>
+                    <dd>> export FLASK_APP=main<br/>> flask migrate</dd>
+                    <dt>Reset Database Tables</dt>
+                    <dd>> export FLASK_APP=main<br/>> flask resetdb</dd>
+                    <dt>Create Admin User</dt>
+                    <dd>> export FLASK_APP=main<br/>> flask createsuperuser &lt;email&gt;</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
