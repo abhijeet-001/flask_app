@@ -6,10 +6,10 @@ SECRET_KEY = "u0fo6l#^8%*80+)hv@^@ipry@rs8p59&7+zra+_*qji47_a64z"
 DEBUG = True
 
 # Database Credentials
-DB_USER = "abhi"
-DB_PASSWORD = "123456"
-HOST = "localhost"
-DB_NAME = "demo"
+DB_USER = "ieklqrecvqerkh"
+DB_PASSWORD = "196700c968985faf547b44ba0dc980d52e3007afac46133435fb8c6fbaf1a139"
+HOST = "ec2-174-129-230-117.compute-1.amazonaws.com"
+DB_NAME = "d4u24ev6fnq04p"
 
 # SQLAlchemy Database URL
 SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://"+DB_USER+":"+DB_PASSWORD+"@"+HOST+"/"+DB_NAME
