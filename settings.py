@@ -3,7 +3,7 @@ SECRET_KEY = "u0fo6l#^8%*80+)hv@^@ipry@rs8p59&7+zra+_*qji47_a64z"
 
 # Defines App's mode 
 # True or False
-DEBUG = True
+DEBUG = False
 
 # Database Credentials
 DB_USER = "ieklqrecvqerkh"
