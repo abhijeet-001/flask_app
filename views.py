@@ -85,6 +85,7 @@ def admin_logout():
 def get_loc_by_ip(ip):
     handler = ipinfo.getHandler(app.config['IPINFO_TOKEN'])
     data = handler.getDetails(ip)
-    location = data.loc.split(",")
-    marker = { "lat": float(location[0]), "lng": float(location[1]), "infobox": ip }
-    return marker
+    if data is not None:
+        location = data.loc.split(",")
+        marker = { "lat": float(location[0]), "lng": float(location[1]), "infobox": ip }
+        return marker
